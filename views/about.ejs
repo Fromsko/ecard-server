@@ -1,0 +1,66 @@
+<!-- views/about.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f8f7;
+      }
+      .container {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      td {
+        background-color: #f2f2f2;
+      }
+      h1 {
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>访问日志</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>IP 地址</th>
+            <th>访问时间</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% accessLogs.forEach(log => { %>
+          <tr>
+            <td><%= log.ip %></td>
+            <td><%= log.AccessTime.toLocaleString() %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
