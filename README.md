@@ -299,4 +299,4 @@ npm i && npm run start
 
 ### 一键部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/Fromsko/easy_api.git)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/Fromsko/ecard-server.git)
